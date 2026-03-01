@@ -42,8 +42,7 @@
             return;
         }
 
-        const socket = new SockJS("http://localhost:8080/chat");
-        stompClient = Stomp.over(socket);
+        const socket = new SockJS("https://websockets-production-28b8.up.railway.app/chat");        stompClient = Stomp.over(socket);
 
         stompClient.connect({}, function(frame) {
             console.log("Connected: " + frame);
